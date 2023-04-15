@@ -7,7 +7,7 @@
 #include <stdlib.h>
 /******************* LOCAL VARIABLES DEFINITIONS ******************/
 static lastaccountsIndex = 6;
-static lastTransactionIndex = 1;
+static lastTransactionIndex = 0;
 
 /******************* GLOBAL VARIABLES DEFINITIONS ******************/
 ST_accountsDB_t accountsDB[255] =
@@ -19,15 +19,7 @@ ST_accountsDB_t accountsDB[255] =
     {210000000.0, RUNNING, "4512565474675612"},
     {30000.0, BLOCKED, "5128653654923661"},
 };
-ST_transaction_t transactionDB[255] =
-{
-    {
-        {"Ahmed Mohamed khalil", "8989374615436851", "12/24"},
-        {235.3, 20000, "17/12/22"},
-        APPROVED,
-        22754
-    }
-};
+ST_transaction_t transactionDB[255] ={0};
 
 /******************* STATIC FUNCTIONS DEFINITIONS ******************/
 static printTransactionState(EN_transState_t valueToPrint)
